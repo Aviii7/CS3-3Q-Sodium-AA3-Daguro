@@ -1,9 +1,9 @@
 function myFunc() {
   let a = prompt("Input the message to be verified: ");
-  if (a.indexOf("FR") !== -1 && a.indexOf("AI") !== -1) {
-   cdocument.getElementById("result").innerHTML = 'The message "' + a + '" is legitimate!';
+  if (a.indexOf("FR") !== -1) {
+    document.getElementById("result").innerHTML = 'The message "' + a + '" is legitimate!';
   }
-  else if (a.indexOf("FR") !== -1) {
+  else if (a.indexOf("FR") !== -1 && a.indexOf("AI") !== -1) {
     document.getElementById("result").innerHTML = 'The message "' + a + '" is legitimate!';
   }
   else if (a.indexOf("AI") !== -1) {
