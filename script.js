@@ -1,10 +1,12 @@
 function myFunc() {
   let a = prompt("Input the message to be verified: ");
-  let upperA = a.toUpperCase();
-  if (upperA.indexOf("FR") !== -1 && upperA.indexOf("AI") !== -1) {
+  if ((a.indexOf("FR") !== -1 && a.indexOf("AI") !== -1) || a.indexOf("FR") !== -1) {
     document.getElementById("result").innerHTML = 'The message "' + a + '" is legitimate!';
   }
-  else if (upperA.indexOf("AI") !== -1) {
+  else if (a.indexOf("AI") !== -1) {
+    document.getElementById("result").innerHTML = 'The message "' + a + '" is fake!';
+  }
+  else if (a.indexOf("aI") !== -1 || a.indexOf("Ai") !== -1) {
     document.getElementById("result").innerHTML = 'The message "' + a + '" is fake!';
   }
   else {
